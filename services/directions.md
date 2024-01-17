@@ -5,7 +5,7 @@ The Routes capabilities in Google Maps provides directions. Follow this exercise
 Look at the following URL: 
 
 ```
-https://maps.googleapis.com/maps/api/directions/json?origin=Disneyland&destination=Universal+Studios+Hollywood&key=YOUR_API_KEY
+https://maps.googleapis.com/maps/api/directions/json?origin=Disneyland&destination=Universal+Studios+Hollywood&key=AIzaSyDv3MGflguusDaLmV_-BUlmuoUI4EbM88w
 ```
 As provided, it will not work. That is because you must provide an API Key. The IP-whitelisted API key will work with this (the directions API is meant to be used server-side, not on a webpage itself. It is a service provided on the web, not a web page itself). Modify the URL above to replace YOUR_API_KEY with the second key provided in this course and test it in a tab. 
 
