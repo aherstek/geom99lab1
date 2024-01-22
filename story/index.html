@@ -24,22 +24,11 @@
             height: 300px;
             margin: 10px 0;
         }
-
-        .largemap {
-            width: 80vw;
-            height: 600px;
-            margin: 10px 0;
-        }
     </style>
 </head>
 <body>
 <h1> Come skiing with me!</h1>
 <p>text</p>
-<div>
-    <h2> Ski Hills in Western Canada</h2>
-    <div id="westernhills" class="largemap"></div>
-</div>
-
 <div class="map-container">
     <div>
         <h2>Map 1 - Sunshine Village </h2>
@@ -61,13 +50,6 @@
 
   // Initialize Google Maps
     function initMap() {
-        // Western Canada Ski Hills
-        const largeMapOptions = {
-            center: { lat: 51.2961188, lng: -116.9631367 }, // 
-            zoom: 4,
-        };
-        const largeMap = new google.maps.Map(document.getElementById('largeMap'), largeMapOptions);
-        // Customize largeMap as needed
         // Map 1
         const mapOptions1 = {
             center: { lat: 51.07857263401073, lng: -115.78273126465088 }, // Sunshine Village 
