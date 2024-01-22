@@ -1,35 +1,71 @@
-<html>
-  <head>
-    <title>Simple Map</title>
-    <script src="https://polyfill.io/v3/polyfill.min.js?features=default"></script>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inset Maps Example</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
 
-    <link rel="stylesheet" type="text/css" href="./style.css" />
-    <script type="module" src="./index.js"></script>
-  </head>
-  <style>
-  /* 
- * Always set the map height explicitly to define the size of the div element
- * that contains the map. 
- */
-#map {
-  height: 100%;
-}
+        #map-container {
+            display: flex;
+            justify-content: space-between;
+            height: 500px;
+        }
 
-/* 
- * Optional: Makes the sample page fill the window. 
- */
-html,
-body {
-  height: 100%;
-  margin: 0;
-  padding: 0;
-}
-  </style>
-  <body>
-    <div id="map"></div>
+        .map {
+            flex: 1;
+            height: 100%;
+        }
+    </style>
+</head>
+<body>
 
-    <!-- prettier-ignore -->
-    <script>(g=>{var h,a,k,p="The Google Maps JavaScript API",c="google",l="importLibrary",q="__ib__",m=document,b=window;b=b[c]||(b[c]={});var d=b.maps||(b.maps={}),r=new Set,e=new URLSearchParams,u=()=>h||(h=new Promise(async(f,n)=>{await (a=m.createElement("script"));e.set("libraries",[...r]+"");for(k in g)e.set(k.replace(/[A-Z]/g,t=>"_"+t[0].toLowerCase()),g[k]);e.set("callback",c+".maps."+q);a.src=`https://maps.${c}apis.com/maps/api/js?`+e;d[q]=f;a.onerror=()=>h=n(Error(p+" could not load."));a.nonce=m.querySelector("script[nonce]")?.nonce||"";m.head.append(a)}));d[l]?console.warn(p+" only loads once. Ignoring:",g):d[l]=(f,...n)=>r.add(f)&&u().then(()=>d[l](f,...n))})
-        ({key: "AIzaSyB41DRUbKWJHPxaFjMAwdrzWzbVKartNGg", v: "weekly"});</script>
-  </body>
+<div id="map-container">
+    <div id="map1" class="map"></div>
+    <div id="map2" class="map"></div>
+    <div id="map3" class="map"></div>
+</div>
+
+<script>
+    // Replace YOUR_API_KEY with your actual Google Maps API key
+    const apiKey = 'AIzaSyDv3MGflguusDaLmV_-BUlmuoUI4EbM88w';
+
+    // Initialize Google Maps
+    function initMap() {
+        const mapOptions = {
+            center: { lat: -34.397, lng: 150.644 }, // Initial center coordinates
+            zoom: 8, // Initial zoom level
+        };
+
+        // Map 1
+        const map1 = new google.maps.Map(document.getElementById('map1'), mapOptions);
+        // Customize map1 as needed
+
+        // Map 2
+        const map2 = new google.maps.Map(document.getElementById('map2'), mapOptions);
+        // Customize map2 as needed
+
+        // Map 3
+        const map3 = new google.maps.Map(document.getElementById('map3'), mapOptions);
+        // Customize map3 as needed
+    }
+
+    // Load the Google Maps JavaScript API with your API key
+    function loadScript() {
+        const script = document.createElement('script');
+        script.src = `https://maps.googleapis.com/maps/api/js?key=${apiKey}&callback=initMap`;
+        script.defer = true;
+        document.head.appendChild(script);
+    }
+
+    // Call the loadScript function to load the API
+    loadScript();
+</script>
+
+</body>
 </html>
