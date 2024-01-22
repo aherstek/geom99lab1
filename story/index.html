@@ -47,26 +47,33 @@
     // Replace YOUR_API_KEY with your actual Google Maps API key
     const apiKey = 'AIzaSyDv3MGflguusDaLmV_-BUlmuoUI4EbM88w';
 
-    // Initialize Google Maps
+  // Initialize Google Maps
     function initMap() {
-        const mapOptions = {
-            center: { lat: 51.180202, lng: -115.565704 }, // Initial center coordinates
-            zoom: 8, // Initial zoom level
-        };
-
-
         // Map 1
-        const map1 = new google.maps.Map(document.getElementById('map1'), mapOptions);
+        const mapOptions1 = {
+            center: { lat: 51.115186, lng: -115.763276 }, // Sunshine Village 
+            zoom: 12,
+        };
+        const map1 = new google.maps.Map(document.getElementById('map1'), mapOptions1);
         // Customize map1 as needed
 
         // Map 2
-        const map2 = new google.maps.Map(document.getElementById('map2'), mapOptions);
+        const mapOptions2 = {
+            center: { lat: 51.20133, lng: -115.634249 }, // Mt. Norquay
+            zoom: 12,
+        };
+        const map2 = new google.maps.Map(document.getElementById('map2'), mapOptions2);
         // Customize map2 as needed
 
         // Map 3
-        const map3 = new google.maps.Map(document.getElementById('map3'), mapOptions);
+        const mapOptions3 = {
+            center: { lat: 51.442311, lng: -116.161916 }, // Lake Louise
+            zoom: 12,
+        };
+        const map3 = new google.maps.Map(document.getElementById('map3'), mapOptions3);
         // Customize map3 as needed
     }
+
 
     // Load the Google Maps JavaScript API with your API key
     function loadScript() {
