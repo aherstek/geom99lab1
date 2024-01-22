@@ -80,6 +80,15 @@
         // Customize map3 as needed
     }
 
+    
+ // Add a marker to the map
+    function addMarker(map, position, title) {
+        new google.maps.Marker({
+            position: position,
+            map: map,
+            title: title,
+        });
+    }
 
     // Load the Google Maps JavaScript API with your API key
     function loadScript() {
