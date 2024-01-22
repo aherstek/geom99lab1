@@ -1,35 +1,46 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Inset Maps Example</title>
+    <title>Vertical Inset Maps Example</title>
     <style>
         body {
             font-family: Arial, sans-serif;
             margin: 0;
             padding: 0;
+            text-align: center;
         }
 
-        #map-container {
+        .map-container {
             display: flex;
-            justify-content: space-between;
-            height: 500px;
+            flex-direction: column;
+            align-items: center;
+            margin-top: 20px;
         }
 
         .map {
-            flex: 1;
-            height: 100%;
+            width: 80vw;
+            height: 300px;
+            margin: 10px 0;
         }
     </style>
 </head>
 <body>
 
-<div id="map-container">
-    <div id="map1" class="map"></div>
-    <div id="map2" class="map"></div>
-    <div id="map3" class="map"></div>
+<div class="map-container">
+    <div>
+        <h2>Map 1 - Sunshine Village </h2>
+        <div id="map1" class="map"></div>
+    </div>
+    <div>
+        <h2>Map 2 - Mt. Norquay </h2>
+        <div id="map2" class="map"></div>
+    </div>
+    <div>
+        <h2>Map 3 - Lake Louise </h2>
+        <div id="map3" class="map"></div>
+    </div>
 </div>
 
 <script>
@@ -39,9 +50,10 @@
     // Initialize Google Maps
     function initMap() {
         const mapOptions = {
-            center: { lat: -34.397, lng: 150.644 }, // Initial center coordinates
+            center: { lat: 51.180202, lng: -115.565704 }, // Initial center coordinates
             zoom: 8, // Initial zoom level
         };
+
 
         // Map 1
         const map1 = new google.maps.Map(document.getElementById('map1'), mapOptions);
