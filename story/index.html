@@ -77,7 +77,6 @@ https://fonts.google.com/icons?selected=Material+Symbols+Outlined:downhill_skiin
             mapTypeId: "terrain"
         };
         const map2 = new google.maps.Map(document.getElementById('map2'), mapOptions2);
-        const skiiconURL = 'https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200';
         addMarker(map2, { lat: 51.20133, lng: -115.634249 }, 'Mt. Norquay', skiiconURL);
 
         // Map 3
@@ -87,7 +86,6 @@ https://fonts.google.com/icons?selected=Material+Symbols+Outlined:downhill_skiin
             mapTypeId: "terrain"
         };
         const map3 = new google.maps.Map(document.getElementById('map3'), mapOptions3);
-        const skiiconURL = 'https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200';
         addMarker(map3, { lat: 51.442311, lng: -116.161916 }, 'Lake Louise', skiiconURL);
     }
 
@@ -100,7 +98,7 @@ https://fonts.google.com/icons?selected=Material+Symbols+Outlined:downhill_skiin
             title: title,
             icon: {
                 url: iconURL,
-                scaleSize: new google.maps.Size(30,30)
+                scaledSize: new google.maps.Size(30,30)
             }
         });
     }
