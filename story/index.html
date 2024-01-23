@@ -2,6 +2,7 @@
 
 <!-- references i used/helpful links to me:
 https://www.w3schools.com/graphics/google_maps_types.asp
+https://fonts.google.com/icons?selected=Material+Symbols+Outlined:downhill_skiing:FILL@0;wght@400;GRAD@0;opsz@24&icon.query=ski
 -->
 <html lang="en">
 <head>
@@ -66,6 +67,7 @@ https://www.w3schools.com/graphics/google_maps_types.asp
             mapTypeId: "terrain"
           };
         const map1 = new google.maps.Map(document.getElementById('map1'), mapOptions1);
+        const iconURL = 'https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200';
         addMarker(map1, { lat: 51.07857263401073, lng: -115.78273126465088 }, 'Sunshine Village');
 
         // Map 2
@@ -89,13 +91,16 @@ https://www.w3schools.com/graphics/google_maps_types.asp
 
     
  // Add a marker to the map
-    function addMarker(map, position, title) {
+    function addMarker(map, position, title, iconURL) {
         new google.maps.Marker({
             position: position,
             map: map,
             title: title,
+            icon: {
+                url: ironURL
+                scaleSize: new google.maps.Size(30,30)
+            }
         });
-    }
 
     // Load the Google Maps JavaScript API with your API key
     function loadScript() {
@@ -106,9 +111,6 @@ https://www.w3schools.com/graphics/google_maps_types.asp
     }
 
     // Call the loadScript function to load the API
-
-
-    
     loadScript();
 </script>
 
