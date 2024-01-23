@@ -63,10 +63,23 @@ https://www.w3schools.com/graphics/google_maps_types.asp
         const mapOptions1 = {
             center: { lat: 51.07857263401073, lng: -115.78273126465088 }, // Sunshine Village 
             zoom: 12,
+            mapTypeId: "terrain"
           };
         const map1 = new google.maps.Map(document.getElementById('map1'), mapOptions1);
         addMarker(map1, { lat: 51.07857263401073, lng: -115.78273126465088 }, 'Map 1 Marker');
-        // Customize map1 as needed
+         const flightPlanCoordinates = [
+            { lat: 37.772, lng: -122.214 },
+            { lat: 21.291, lng: -157.821 },
+            { lat: -18.142, lng: 178.431 },
+            { lat: -27.467, lng: 153.027 },
+         };
+          const flightPath = new google.maps.Polyline({
+            path: flightPlanCoordinates,
+            geodesic: true,
+            strokeColor: "#FF0000",
+            strokeOpacity: 1.0,
+            strokeWeight: 2,
+  };
 
         // Map 2
         const mapOptions2 = {
@@ -104,6 +117,11 @@ https://www.w3schools.com/graphics/google_maps_types.asp
     }
 
     // Call the loadScript function to load the API
+ flightPath.setMap(map);
+}
+
+window.initMap = initMap;
+    
     loadScript();
 </script>
 
