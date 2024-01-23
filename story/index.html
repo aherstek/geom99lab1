@@ -79,7 +79,10 @@ https://www.w3schools.com/graphics/google_maps_types.asp
             strokeColor: "#FF0000",
             strokeOpacity: 1.0,
             strokeWeight: 2,
-  };
+  }];
+
+    flightPath.setMap(map);
+    window.initMap = initMap;
 
         // Map 2
         const mapOptions2 = {
@@ -117,10 +120,8 @@ https://www.w3schools.com/graphics/google_maps_types.asp
     }
 
     // Call the loadScript function to load the API
- flightPath.setMap(map);
-}
 
-window.initMap = initMap;
+
     
     loadScript();
 </script>
