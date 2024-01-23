@@ -62,39 +62,29 @@ https://www.w3schools.com/graphics/google_maps_types.asp
         // Map 1
         const mapOptions1 = {
             center: { lat: 51.07857263401073, lng: -115.78273126465088 }, // Sunshine Village 
-            zoom: 15,
+            zoom: 14,
             mapTypeId: "terrain"
           };
         const map1 = new google.maps.Map(document.getElementById('map1'), mapOptions1);
         addMarker(map1, { lat: 51.07857263401073, lng: -115.78273126465088 }, 'Sunshine Village');
-         const flightPlanCoordinates = [
-            { lat: 51.07857263401073, lng: -115.78273126465088 },
-            { lat: 52, lng: -119.78273126465088 },
-         ];
-          const flightPath = new google.maps.Polyline({
-            path: flightPlanCoordinates,
-            geodesic: true,
-            strokeColor: "#FF0000",
-            strokeOpacity: 1.0,
-            strokeWeight: 2,
-  });
-    flightPath.setMap(map);
 
         // Map 2
         const mapOptions2 = {
             center: { lat: 51.20133, lng: -115.634249 }, // Mt. Norquay
-            zoom: 15,
+            zoom: 14,
+            mapTypeId: "terrain"
         };
         const map2 = new google.maps.Map(document.getElementById('map2'), mapOptions2);
-        // Customize map2 as needed
+        addMarker(map1, { lat: 51.20133, lng: -115.634249 }, 'Mt. Norquay');
 
         // Map 3
         const mapOptions3 = {
             center: { lat: 51.442311, lng: -116.161916 }, // Lake Louise
-            zoom: 15,
+            zoom: 14,
+            mapTypeId: "terrain"
         };
         const map3 = new google.maps.Map(document.getElementById('map3'), mapOptions3);
-        // Customize map3 as needed
+        addMarker(map1, { lat: 51.442311, lng: -116.161916 }, 'Lake Louise');
     }
 
     
