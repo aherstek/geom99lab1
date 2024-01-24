@@ -30,8 +30,8 @@ https://fonts.google.com/icons?selected=Material+Symbols+Outlined:downhill_skiin
         }
 
         .map {
-            width: 80vw;
-            height: 500px;
+            width: 90vw;
+            height: 700px;
             margin: 10px 0;
         }
     </style>
@@ -39,19 +39,11 @@ https://fonts.google.com/icons?selected=Material+Symbols+Outlined:downhill_skiin
 <body>
 <h1> Come skiing with me!</h1>
 <p>In Alberta, there are 34 ski resorts - totalling over 610 km of slopes, and 133 chair lifts!</p>
-<p>Here are my top 3 hills to enjoy, with my favourite runs from each.</p>
+<p>Come with me to Sunshine Village - my favourite ski hill just outside of Banff :) .</p>
 <div class="map-container">
     <div>
         <h2> Sunshine Village </h2>
         <div id="map1" class="map"></div>
-    </div>
-    <div>
-        <h2> Mt. Norquay </h2>
-        <div id="map2" class="map"></div>
-    </div>
-    <div>
-        <h2> Lake Louise </h2>
-        <div id="map3" class="map"></div>
     </div>
 </div>
 
@@ -71,25 +63,6 @@ https://fonts.google.com/icons?selected=Material+Symbols+Outlined:downhill_skiin
         const map1 = new google.maps.Map(document.getElementById('map1'), mapOptions1);
         const skiiconURL = 'https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0';
         addMarker(map1, { lat: 51.07857263401073, lng: -115.78273126465088 }, 'Sunshine Village', skiiconURL);
-
-        // Map 2
-        const mapOptions2 = {
-            center: { lat: 51.20133, lng: -115.634249 }, // Mt. Norquay
-            zoom: 14,
-            mapTypeId: "terrain"
-        };
-        const map2 = new google.maps.Map(document.getElementById('map2'), mapOptions2);
-        addMarker(map2, { lat: 51.20133, lng: -115.634249 }, 'Mt. Norquay', skiiconURL);
-
-        // Map 3
-        const mapOptions3 = {
-            center: { lat: 51.442311, lng: -116.161916 }, // Lake Louise
-            zoom: 14,
-            mapTypeId: "terrain"
-        };
-        const map3 = new google.maps.Map(document.getElementById('map3'), mapOptions3);
-        addMarker(map3, { lat: 51.442311, lng: -116.161916 }, 'Lake Louise', skiiconURL);
-    }
 
     
  // Add a marker to the map
