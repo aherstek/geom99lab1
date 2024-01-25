@@ -138,7 +138,6 @@ markers references: https://github.com/googlemaps/js-samples/blob/main/samples/m
         const polyline4 = new google.maps.Polyline({
                 path: [
                     { lat: 51.074005, lng: -115.754701 },
-                    
                     { lat: 51.073541, lng: -115.756017 },
                     { lat: 51.072752, lng: -115.757343 },
                     { lat: 51.071438, lng: -115.759658 },
@@ -162,17 +161,55 @@ markers references: https://github.com/googlemaps/js-samples/blob/main/samples/m
                 strokeWeight: 2 
             });
 
+           const polyline5 = new google.maps.Polyline({
+                path: [
+                    { lat: 51.07857263401073, lng: -115.78273126465088 },
+                    { lat: 51.081363, lng: -115.791598 },
+                ],
+                geodesic: true,
+                strokeColor: '#FF0000',
+                strokeOpacity: 0.5,
+                strokeWeight: 2
+            });
+
+       const polyline6 = new google.maps.Polyline({
+                path: [
+                    { lat: 51.081363, lng: -115.791598 },
+                    
+                    { lat: 51.082597, lng: -115.790770 },
+                    { lat: 51.083581, lng: -115.788665 },
+                    { lat: 51.084484, lng: -115.786388 },
+                    { lat: 51.085079, lng: -115.785010 },
+                    { lat: 51.084518, lng: -115.780493 },
+                    { lat: 51.084105, lng: -115.783898 },
+                    { lat: 51.083600, lng: -115.783442 },
+                    { lat: 51.082857, lng: -115.784428 },
+                    { lat: 51.082407, lng: -115.784217 },
+                    { lat: 51.081642, lng: -115.782881 },
+                    { lat: 51.080646, lng: -115.782100 },
+                    { lat: 51.07857263401073, lng: -115.78273126465088 },
+                ],
+                geodesic: true,
+                strokeColor: '#0000FF',
+                strokeOpacity: 0.5,
+                strokeWeight: 2 
+            });
+
             // Set the map for the polylines
             polyline1.setMap(map1);
             polyline2.setMap(map1);
             polyline3.setMap(map1);
             polyline4.setMap(map1);
+            polyline5.setMap(map1);
+            polyline6.setMap(map1);
 
               // Add labeled markers
-            addLabeledMarker(map1, { lat: 51.074282, lng: -115.785243 }, 'Tin Can Trees', 'white');
+            addLabeledMarker(map1, { lat: 51.074282, lng: -115.785243 }, 'Jerrys Run', 'white');
             addLabeledMarker(map1, { lat: 51.074005, lng: -115.754701 }, 'Angel Express', 'white');
             addLabeledMarker(map1, { lat: 51.071278, lng: -115.786414 }, 'Strawberry Express', 'white');
             addLabeledMarker(map1, { lat: 51.073622, lng: -115.764355 }, 'Springhill', 'white');
+            addLabeledMarker(map1, { lat: 51.081363, lng: -115.791598 }, 'Wawa Express', 'white');
+            addLabeledMarker(map1, { lat: 51.083600, lng: -115.783442 }, 'Tin Can Trees', 'white');
         }
   
         function addLabeledMarker(map, position, label, markerColor) {
