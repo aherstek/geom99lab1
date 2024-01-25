@@ -43,12 +43,6 @@ markers references: https://github.com/googlemaps/js-samples/blob/main/samples/m
             height: 700px;
             margin: 10px 0;
         }
-
-        .street-view {
-            width: 90vw;
-            height: 300px; /* Adjust the height as needed */
-            margin: 10px 0;
-        }
     </style>
 </head>
 <body>
@@ -159,19 +153,6 @@ markers references: https://github.com/googlemaps/js-samples/blob/main/samples/m
             addLabeledMarker(map1, { lat: 51.071278, lng: -115.786414 }, 'Strawberry Express', 'black');
             addLabeledMarker(map1, { lat: 51.073622, lng: -115.764355 }, 'Springhill', 'white');
         }
-
-               // Add Street View panorama
-        const streetView = new google.maps.StreetViewPanorama(
-                document.getElementById('streetView'),
-                {
-                    position: { lat: 51.073622, lng: -115.764355 },
-                    pov: { heading: 0, pitch: 0 }, // Adjust heading and pitch as needed
-                    zoom: 1
-                }
-            );
-            map1.setStreetView(streetView);
-        }
-
   
         function addLabeledMarker(map, position, label, markerColor) {
             new google.maps.Marker({
