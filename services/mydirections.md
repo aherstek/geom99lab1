@@ -39,4 +39,6 @@ This is part of your first practical lab in Week 3
 1. A working URL properly documented in the MarkDown and results in the JSON file with a unique origin and destination in directions earns 50%
 2. Including one to four additional functioning unique parameters from the API earns 50-70%
 3. Having 3 or more functioning unique/novel and well-thought out parameters from the API earns 70-90%. Explore the API documentation for parameters we have not used.
-4. Tell the story of your route. Include more than 2 "stops", and/or including additional links to display PlaceIDs on Google Maps, or other innovative presentations earns 80%-100%. 
+4. Tell the story of your route. Include more than 2 "stops", and/or including additional links to display PlaceIDs on Google Maps, or other innovative presentations earns 80%-100%.
+
+<script src="[https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY](https://maps.googleapis.com/maps/api/directions/json?avoid=highways&mode=bicycling&origin=place_id:ChIJ4ZhursSicVMR9Rd8yCJZ1wc&destination=place_id:ChIJc7hqMilUdFMRmOqqx5po2rU&waypoints=Calgary+Tower|Calgary+Central+Library&key=AIzaSyCM-WWHYHIKY-do4kquMy9Z4wQaQx51AuE)https://maps.googleapis.com/maps/api/directions/json?avoid=highways&mode=bicycling&origin=place_id:ChIJ4ZhursSicVMR9Rd8yCJZ1wc&destination=place_id:ChIJc7hqMilUdFMRmOqqx5po2rU&waypoints=Calgary+Tower|Calgary+Central+Library&key=AIzaSyCM-WWHYHIKY-do4kquMy9Z4wQaQx51AuE&callback=myMap"></script>
