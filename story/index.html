@@ -43,6 +43,21 @@ markers references: https://github.com/googlemaps/js-samples/blob/main/samples/m
             height: 700px;
             margin: 10px 0;
         }
+
+         .legend {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            background-color: white;
+            border: 1px solid #ccc;
+            padding: 10px;
+            border-radius: 5px;
+        }
+
+        .legend-item {
+            margin-bottom: 5px;
+        }
+      
     </style>
 </head>
 <body>
@@ -52,8 +67,13 @@ markers references: https://github.com/googlemaps/js-samples/blob/main/samples/m
         <h2> Welcome to Sunshine Village!! Check out some of my favourite runs &</h2>
         <h2>which chairlift to take to get there!</h2>
         <div id="map1" class="map"></div>
+        <div class="legend">
+                <div class="legend-item" style="color: #FF0000;">Red Line</div>
+                <div class="legend-item" style="color: #0000FF;">Blue Line</div>
+                <!-- Add more legend items as needed -->
+            </div>
+        </div>
     </div>
-</div>
 
 <script>
     const apiKey = 'AIzaSyDv3MGflguusDaLmV_-BUlmuoUI4EbM88w';
