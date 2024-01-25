@@ -65,7 +65,7 @@ https://fonts.google.com/icons?selected=Material+Symbols+Outlined:downhill_skiin
         const polyline1 = new google.maps.Polyline({
                 path: [
                     { lat: 51.07857263401073, lng: -115.78273126465088 },
-                    {lat: 51.071278, lng: -115.786414},
+                    { lat: 51.071278, lng: -115.786414 },
                 ],
                 geodesic: true,
                 strokeColor: '#FF0000',
@@ -80,14 +80,38 @@ https://fonts.google.com/icons?selected=Material+Symbols+Outlined:downhill_skiin
                     { lat: 51.074005, lng: -115.754701 },
                 ],
                 geodesic: true,
-                strokeColor: '#0000FF',
+                strokeColor: '#FF0000',
                 strokeOpacity: 1.0,
                 strokeWeight: 2
+            });
+
+          const polyline3 = new google.maps.Polyline({
+                path: [
+                    { lat: 51.071278, lng: -115.786414 },
+                    { lat: 51.071646, lng: -115.784604 },
+                    { lat: 51.072583, lng: -115.785850 },
+                    { lat: 51.073592, lng: -115.787554 },
+                    { lat: 51.074931, lng: -115.788456 },
+                    { lat: 51.074674, lng: -115.786702 },
+
+                    { lat: 51.074282, lng: -115.785243 },
+                    { lat: 51.074478, lng: -115.783784 },
+                    { lat: 51.074777, lng: -115.782670 },
+                    { lat: 51.075724, lng: -115.782194 },
+                    { lat: 51.078258, lng: -115.782965 },
+                    { lat: 51.07857263401073, lng: -115.78273126465088 },
+                    
+                ],
+                geodesic: true,
+                strokeColor: '#0000FF',
+                strokeOpacity: 1.0,
+                strokeWeight: 2 
             });
 
             // Set the map for the polylines
             polyline1.setMap(map1);
             polyline2.setMap(map1);
+            polyline3.setMap(map1);
         }
     // Load the Google Maps JavaScript API with your API key
     function loadScript() {
