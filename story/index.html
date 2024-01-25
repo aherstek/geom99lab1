@@ -2,7 +2,9 @@
 
 <!-- references i used/helpful links to me:
 terrain map reference: https://www.w3schools.com/graphics/google_maps_types.asp
-polyline reference: https://github.com/googlemaps/js-samples/blob/main/samples/polyline-simple/index.ts -->
+polyline reference: https://github.com/googlemaps/js-samples/blob/main/samples/polyline-simple/index.ts
+markers references: https://github.com/googlemaps/js-samples/blob/main/samples/marker-labels/index.ts
+                    https://github.com/googlemaps/js-samples/blob/main/samples/marker-simple/index.ts -->
 
 <html lang="en">
 <head>
@@ -147,20 +149,27 @@ polyline reference: https://github.com/googlemaps/js-samples/blob/main/samples/p
             polyline4.setMap(map1);
 
               // Add labeled markers
-            addLabeledMarker(map1, { lat: 51.074282, lng: -115.785243 }, 'Tin Can Trees');
+            addLabeledMarker(map1, { lat: 51.074282, lng: -115.785243 }, 'Tin Can Trees', 'white');
             addLabeledMarker(map1, { lat: 51.074005, lng: -115.754701 }, 'Angel Express');
             addLabeledMarker(map1, { lat: 51.071278, lng: -115.786414 }, 'Strawberry Express');
-            addLabeledMarker(map1, { lat: 51.073622, lng: -115.764355 }, 'Springhill');
+            addLabeledMarker(map1, { lat: 51.073622, lng: -115.764355 }, 'Springhill', 'white');
         }
 
-        function addLabeledMarker(map, position, label) {
+        function addLabeledMarker(map, position, label, markerColor) {
             new google.maps.Marker({
                 position: position,
                 map: map,
                 label: label,
+                icon: {
+                    path: google.maps.SymbolPath.CIRCLE,
+                    fillColor: markerColor,
+                    fillOpacity: 1,
+                    strokeWeight: 0,
+                    scale: 10 // Adjust the size of the marker
+                },
             });
         }
-
+    
     // Load the Google Maps JavaScript API with your API key
     function loadScript() {
         const script = document.createElement('script');
