@@ -44,6 +44,11 @@ markers references: https://github.com/googlemaps/js-samples/blob/main/samples/m
             margin: 10px 0;
         }
 
+        .street-view {
+            width: 90vw;
+            height: 300px; /* Adjust the height as needed */
+            margin: 10px 0;
+        }
     </style>
 </head>
 <body>
@@ -150,11 +155,24 @@ markers references: https://github.com/googlemaps/js-samples/blob/main/samples/m
 
               // Add labeled markers
             addLabeledMarker(map1, { lat: 51.074282, lng: -115.785243 }, 'Tin Can Trees', 'white');
-            addLabeledMarker(map1, { lat: 51.074005, lng: -115.754701 }, 'Angel Express');
-            addLabeledMarker(map1, { lat: 51.071278, lng: -115.786414 }, 'Strawberry Express');
+            addLabeledMarker(map1, { lat: 51.074005, lng: -115.754701 }, 'Angel Express', 'black');
+            addLabeledMarker(map1, { lat: 51.071278, lng: -115.786414 }, 'Strawberry Express', 'black');
             addLabeledMarker(map1, { lat: 51.073622, lng: -115.764355 }, 'Springhill', 'white');
         }
 
+               // Add Street View panorama
+            const streetView = new google.maps.StreetViewPanorama(
+                document.getElementById('streetView'),
+                {
+                    position: { lat: 51.073622, lng: -115.764355 },
+                    pov: { heading: 0, pitch: 0 }, // Adjust heading and pitch as needed
+                    zoom: 1
+                }
+            );
+            map1.setStreetView(streetView);
+        }
+
+  
         function addLabeledMarker(map, position, label, markerColor) {
             new google.maps.Marker({
                 position: position,
@@ -165,7 +183,7 @@ markers references: https://github.com/googlemaps/js-samples/blob/main/samples/m
                     fillColor: markerColor,
                     fillOpacity: 1,
                     strokeWeight: 0,
-                    scale: 10 // Adjust the size of the marker
+                    scale: 5 // Adjust the size of the marker
                 },
             });
         }
