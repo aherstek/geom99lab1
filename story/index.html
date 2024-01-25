@@ -35,12 +35,6 @@ https://fonts.google.com/icons?selected=Material+Symbols+Outlined:downhill_skiin
             margin: 10px 0;
         }
 
-        #inset-map {
-            width: 200px;
-            height: 150px;
-            border: 1px solid #000080;
-            margin-top: 10px;
-        }
     </style>
 </head>
 <body>
@@ -66,20 +60,6 @@ https://fonts.google.com/icons?selected=Material+Symbols+Outlined:downhill_skiin
             mapTypeId: "terrain"
         };
         const map1 = new google.maps.Map(document.getElementById('map1'), mapOptions1);
-    }
-        // Inset Map
-        const mapOptionsInset = {
-                center: { lat: 51.07857263401073, lng: -115.78273126465088 },
-                zoom: 16,
-                mapTypeId: "terrain"
-        };
-        const insetMap = new google.maps.Map(document.getElementById('inset-map'), mapOptionsInset);
-
-            // Create a marker for the inset map
-        const marker = new google.maps.Marker({
-                position: { lat: 51.07857263401073, lng: -115.78273126465088 },
-                map: insetMap,
-                title: 'Sunshine Village'
          });
     }
     
