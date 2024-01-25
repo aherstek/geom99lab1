@@ -11,6 +11,7 @@ Be creative and use multiple parameters from the API documentation to earn a top
 ```
 https://maps.googleapis.com/maps/api/directions/json?origin=Big+Rock+Okotoks&destination=Francis+The+Pig+Red+Deer&key=AIzaSyCM-WWHYHIKY-do4kquMy9Z4wQaQx51AuE
 ```
+https://maps.googleapis.com/maps/api/directions/json?origin=place_id:ChIJ4ZhursSicVMR9Rd8yCJZ1wc&destination=place_id:ChIJc7hqMilUdFMRmOqqx5po2rU&key=AIzaSyCM-WWHYHIKY-do4kquMy9Z4wQaQx51AuE
 
 Copy/paste the JSON results and save them into the empty file ```mydirections.json``` in this repository
 
