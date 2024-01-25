@@ -61,7 +61,35 @@ https://fonts.google.com/icons?selected=Material+Symbols+Outlined:downhill_skiin
         };
         const map1 = new google.maps.Map(document.getElementById('map1'), mapOptions1);
     }
-    
+
+         // Add polylines
+        const polyline1 = new google.maps.Polyline({
+                path: [
+                    { lat: 51.07857263401073, lng: -115.78273126465088 },
+                    {lat: 51.071278, lng: -115.786414},
+                ],
+                geodesic: true,
+                strokeColor: '#FF0000',
+                strokeOpacity: 1.0,
+                strokeWeight: 2
+            });
+
+        const polyline2 = new google.maps.Polyline({
+                path: [
+                    { lat: 51.07857263401073, lng: -115.78273126465088 },
+                    { lat: 51.071853, lng: -115.777763 },
+                    { lat: 51.074005, lng: -115.754701 },
+                ],
+                geodesic: true,
+                strokeColor: '#0000FF',
+                strokeOpacity: 1.0,
+                strokeWeight: 2
+            });
+
+            // Set the map for the polylines
+            polyline1.setMap(map1);
+            polyline2.setMap(map1);
+        }
     // Load the Google Maps JavaScript API with your API key
     function loadScript() {
         const script = document.createElement('script');
