@@ -107,15 +107,44 @@ https://fonts.google.com/icons?selected=Material+Symbols+Outlined:downhill_skiin
                 strokeWeight: 2 
             });
 
+        const polyline4 = new google.maps.Polyline({
+                path: [
+                    { lat: 51.074005, lng: -115.754701 },
+                    
+                    { lat: 51.073541, lng: -115.756017 },
+                    { lat: 51.072752, lng: -115.757343 },
+                    { lat: 51.071438, lng: -115.759658 },
+                    { lat: 51.069297, lng: -115.764540 },
+                    { lat: 51.069449, lng: -115.767654 },
+                    { lat: 51.070975, lng: -115.766768 },
+                    { lat: 51.072312, lng: -115.764883 },
+                    { lat: 51.073622, lng: -115.764355 },
+                    { lat: 51.073515, lng: -115.767554 },
+                    { lat: 51.072456, lng: -115.769896 },
+                    { lat: 51.074986, lng: -115.770653 },
+                    { lat: 51.075713, lng: -115.774081 },
+                    { lat: 51.077041, lng: -115.778508 },
+                    { lat: 51.078342, lng: -115.781579 },
+                    { lat: 51.07857263401073, lng: -115.78273126465088 },
+                    
+                ],
+                geodesic: true,
+                strokeColor: '#0000FF',
+                strokeOpacity: 1.0,
+                strokeWeight: 2 
+            });
+
             // Set the map for the polylines
             polyline1.setMap(map1);
             polyline2.setMap(map1);
             polyline3.setMap(map1);
+            polyline4.setMap(map1);
 
               // Add labeled markers
             addLabeledMarker(map1, { lat: 51.074282, lng: -115.785243 }, 'Tin Can Trees');
-            addLabeledMarker(map1, { lat: 51.071853, lng: -115.777763 }, 'Tin ');
+            addLabeledMarker(map1, { lat: 51.074005, lng: -115.754701 }, 'Angel Express');
             addLabeledMarker(map1, { lat: 51.071278, lng: -115.786414 }, 'Strawberry Express');
+            addLabeledMarker(map1, { lat: 51.073622, lng: -115.764355 }, 'Springhill');
         }
 
         function addLabeledMarker(map, position, label) {
