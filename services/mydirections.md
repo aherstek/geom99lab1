@@ -9,7 +9,7 @@ Be creative and use multiple parameters from the API documentation to earn a top
 ## Directions URL
 
 ```
-https://maps.googleapis.com/maps/api/directions/json?avoid=highways&mode=bicycling&origin=place_id:ChIJ4ZhursSicVMR9Rd8yCJZ1wc&destination=place_id:ChIJc7hqMilUdFMRmOqqx5po2rU&waypoints=Calgary+Tower|Calgary+Central+Library&key=AIzaSyCM-WWHYHIKY-do4kquMy9Z4wQaQx51AuE)
+https://maps.googleapis.com/maps/api/directions/json?avoid=highways&mode=bicycling&origin=place_id:ChIJ4ZhursSicVMR9Rd8yCJZ1wc&destination=place_id:ChIJc7hqMilUdFMRmOqqx5po2rU&waypoints=Calgary+Tower|Calgary+Central+Library&key=AIzaSyCM-WWHYHIKY-do4kquMy9Z4wQaQx51AuE
 ```
 
 
