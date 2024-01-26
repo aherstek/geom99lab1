@@ -19,7 +19,7 @@ Copy/paste the JSON results and save them into the empty file ```mydirections.js
 From one silly landmark to the next! I love visiting quirky 'side of the road' attractions and here are 2 I have visited in Alberta. 
 
 My directions are from the Okotoks Erratic to a statue of a pig named Francis. This route avoids highways and takes a bike route,
-as I am an avid cyclist myself. I have put two checkpoints while travelling through Calgary at the Central library (an awesome study spot!)
+as I am an avid road cyclist myself. I have put two checkpoints while travelling through Calgary at the Central library (an awesome study spot!)
 and the Calgary tower (I had to add an obligatory tourist stop, lol).
 
 ### Simple option:
