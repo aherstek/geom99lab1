@@ -15,7 +15,7 @@ markers references: https://github.com/googlemaps/js-samples/blob/main/samples/m
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Ski ya later!</title>
-    <style>
+    <style> /* css styling */
         body {
             font-family: Courier New, sans-serif;
             color: #000080;
@@ -63,7 +63,13 @@ markers references: https://github.com/googlemaps/js-samples/blob/main/samples/m
             font-size: 20px;
             margin-bottom: 5px;
         }
-      
+                
+       .legend-item-red {
+        color: #FF0000;
+    }
+        .legend-item-blue {
+        color: #0000FF;
+    }       
     </style>
 </head>
 <body>
@@ -74,9 +80,8 @@ markers references: https://github.com/googlemaps/js-samples/blob/main/samples/m
         <h2>which chairlift to take to get there!</h2>
         <div id="map1" class="map"></div>
         <div class="legend">
-          <!-- I know this is inline CSS which i shouldn't use but I noticed it too late to change it - I'm sorry! -->
-                <div class="legend-item" style="color: #FF0000;">Red Line - Chairlift</div>
-                <div class="legend-item" style="color: #0000FF;">Blue Line - Ski Trail</div>
+                <div class="legend-item legend-item-red">Red Line - Chairlift</div>
+                <div class="legend-item legend-item-blue">Blue Line - Ski Trail</div>
             </div>
         </div>
     </div>
