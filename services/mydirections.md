@@ -18,17 +18,16 @@ Copy/paste the JSON results and save them into the empty file ```mydirections.js
 ## My URLs
 From one silly landmark to the next! I love visiting quirky 'side of the road' attractions and here are 2 I have visited in Alberta. 
 
-Origin: https://www.google.com/maps/place/?q=place_id:ChIJ4ZhursSicVMR9Rd8yCJZ1wc - Okotoks Erratic
-Destination: https://www.google.com/maps/place/?q=place_id:ChIJc7hqMilUdFMRmOqqx5po2rU - Francis the Pig Statue
+My directions are from the Okotoks Erratic to a statue of a pig named Francis. This route avoids highways and takes a bike route,
+as I am an avid cyclist myself. I have put two checkpoints while travelling through Calgary at the Central library (an awesome study spot!)
+and the Calgary tower (I had to add an obligatory tourist stop, lol).
 
 ### Simple option:
-
-(returns map-preferred) Maps PlaceID search: https://www.google.com/maps/place/?q=place_id:ChIJFfiCrdo4Qm0RqPwuOAVtaj8
+Origin PlaceID: https://www.google.com/maps/place/?q=place_id:ChIJ4ZhursSicVMR9Rd8yCJZ1wc - Okotoks Erratic
+Destination PlaceID: https://www.google.com/maps/place/?q=place_id:ChIJc7hqMilUdFMRmOqqx5po2rU - Francis the Pig Statue
 ### Efficient option
-
-(returns JSON) API PlaceID link https://maps.googleapis.com/maps/api/place/details/json?placeid=ChIJV2BQ4laeekgRFauLvdXbFXE&key=<INSERTKEY>
-
-  which the JSON will have a CID that can be directly used as a URL like https://maps.google.com/?cid=4569584641105657000
+Orgin PlaceID: https://maps.googleapis.com/maps/api/place/details/json?placeid=ChIJ4ZhursSicVMR9Rd8yCJZ1wc&key=AIzaSyCM-WWHYHIKY-do4kquMy9Z4wQaQx51AuE
+Destination PlaceID: https://maps.googleapis.com/maps/api/place/details/json?placeid=ChIJFfiCrdo4Qm0RqPwuOAVtaj8&key=AIzaSyCM-WWHYHIKY-do4kquMy9Z4wQaQx51AuE
 
 
 ____
@@ -43,4 +42,3 @@ This is part of your first practical lab in Week 3
 3. Having 3 or more functioning unique/novel and well-thought out parameters from the API earns 70-90%. Explore the API documentation for parameters we have not used.
 4. Tell the story of your route. Include more than 2 "stops", and/or including additional links to display PlaceIDs on Google Maps, or other innovative presentations earns 80%-100%.
 
-<script src="[https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY](https://maps.googleapis.com/maps/api/directions/json?avoid=highways&mode=bicycling&origin=place_id:ChIJ4ZhursSicVMR9Rd8yCJZ1wc&destination=place_id:ChIJc7hqMilUdFMRmOqqx5po2rU&waypoints=Calgary+Tower|Calgary+Central+Library&key=AIzaSyCM-WWHYHIKY-do4kquMy9Z4wQaQx51AuE)https://maps.googleapis.com/maps/api/directions/json?avoid=highways&mode=bicycling&origin=place_id:ChIJ4ZhursSicVMR9Rd8yCJZ1wc&destination=place_id:ChIJc7hqMilUdFMRmOqqx5po2rU&waypoints=Calgary+Tower|Calgary+Central+Library&key=AIzaSyCM-WWHYHIKY-do4kquMy9Z4wQaQx51AuE&callback=myMap"></script>
