@@ -15,9 +15,11 @@ https://maps.googleapis.com/maps/api/directions/json?avoid=highways&mode=bicycli
 
 Copy/paste the JSON results and save them into the empty file ```mydirections.json``` in this repository
 
-## Optional URLs
+## My URLs
+From one silly landmark to the next! I love visiting quirky 'side of the road' attractions and here are 2 I have visited in Alberta. 
 
-Read the Rubric to find out about what options exist to earn more marks. Here is where you can provide these additional links to place ids or other items telling a story about your chosen directions API
+Origin: https://www.google.com/maps/place/?q=place_id:ChIJ4ZhursSicVMR9Rd8yCJZ1wc - Okotoks Erratic
+Destination: https://www.google.com/maps/place/?q=place_id:ChIJc7hqMilUdFMRmOqqx5po2rU - Francis the Pig Statue
 
 ### Simple option:
 
