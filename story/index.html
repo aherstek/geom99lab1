@@ -2,9 +2,13 @@
 
 <!-- references i used/helpful links to me:
 terrain map reference: https://www.w3schools.com/graphics/google_maps_types.asp
+            
 polyline reference: https://github.com/googlemaps/js-samples/blob/main/samples/polyline-simple/index.ts
+                    https://developers.google.com/maps/documentation/javascript/examples/polyline-simple
+
 markers references: https://github.com/googlemaps/js-samples/blob/main/samples/marker-labels/index.ts
-                    https://github.com/googlemaps/js-samples/blob/main/samples/marker-simple/index.ts -->
+                    https://github.com/googlemaps/js-samples/blob/main/samples/marker-simple/index.ts
+                    https://developers.google.com/maps/documentation/javascript/examples/advanced-markers-simple-->
 
 <html lang="en">
 <head>
@@ -79,18 +83,17 @@ markers references: https://github.com/googlemaps/js-samples/blob/main/samples/m
 
 <script>
     const apiKey = 'AIzaSyDv3MGflguusDaLmV_-BUlmuoUI4EbM88w';
-
-  // Initialize Google Maps
+ // initializing the google maps function 
     function initMap() {
-        // Map 1
+        // map of sunshine village
         const mapOptions1 = {
-            center: { lat: 51.076486, lng: -115.771269 }, // Sunshine Village 
+            center: { lat: 51.076486, lng: -115.771269 }, // sunshine coordinates i want to be my center point
             zoom: 15,
             mapTypeId: "terrain"
         };
         const map1 = new google.maps.Map(document.getElementById('map1'), mapOptions1);
 
-         // Add polylines
+         // adding in my polylines of ski hills and chair lifts
         const polyline1 = new google.maps.Polyline({
                 path: [
                     { lat: 51.078259, lng: -115.783322 },
@@ -197,7 +200,7 @@ markers references: https://github.com/googlemaps/js-samples/blob/main/samples/m
                 strokeWeight: 2 
             });
 
-            // Set the map for the polylines
+            // setting the map for the polylines created
             polyline1.setMap(map1);
             polyline2.setMap(map1);
             polyline3.setMap(map1);
@@ -205,7 +208,7 @@ markers references: https://github.com/googlemaps/js-samples/blob/main/samples/m
             polyline5.setMap(map1);
             polyline6.setMap(map1);
 
-              // Add labeled markers
+              // adding my labeled markers for each polyline at desired point
             addLabeledMarker(map1, { lat: 51.074674, lng: -115.786702 }, 'Jerrys Run', 'white');
             addLabeledMarker(map1, { lat: 51.074005, lng: -115.754701 }, 'Angel Express', 'white');
             addLabeledMarker(map1, { lat: 51.071278, lng: -115.786414 }, 'Strawberry Express', 'white');
@@ -224,12 +227,12 @@ markers references: https://github.com/googlemaps/js-samples/blob/main/samples/m
                     fillColor: markerColor,
                     fillOpacity: 0.8,
                     strokeWeight: 0,
-                    scale: 7 // Adjust the size of the marker
+                    scale: 7 // used to adjust the size 
                 },
             });
         }
     
-    // Load the Google Maps JavaScript API with your API key
+    // loading the google maps JS API
     function loadScript() {
         const script = document.createElement('script');
         script.src = `https://maps.googleapis.com/maps/api/js?key=${apiKey}&callback=initMap`;
@@ -237,7 +240,7 @@ markers references: https://github.com/googlemaps/js-samples/blob/main/samples/m
         document.head.appendChild(script);
     }
 
-    // Call the loadScript function to load the API
+    // calling the loadScript function to load API
     loadScript();
 </script>
 
